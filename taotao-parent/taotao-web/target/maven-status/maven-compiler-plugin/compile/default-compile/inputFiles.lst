@@ -1,0 +1,17 @@
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-web\src\main\java\com\taotao\web\service\IndexService.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-web\src\main\java\com\taotao\web\controller\ItemController.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-web\src\main\java\com\taotao\web\pojo\OrderItem.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-web\src\main\java\com\taotao\web\rabbitHandler\ItemMQHandler.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-web\src\main\java\com\taotao\web\threaLocal\UserThreadLocal.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-web\src\main\java\com\taotao\web\controller\OrderController.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-web\src\main\java\com\taotao\web\controller\ItemCacheController.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-web\src\main\java\com\taotao\web\service\CartService.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-web\src\main\java\com\taotao\web\interceptors\UserLoginHandleInterceptor.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-web\src\main\java\com\taotao\web\service\ItemService.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-web\src\main\java\com\taotao\web\pojo\OrderShipping.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-web\src\main\java\com\taotao\web\controller\IndexController.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-web\src\main\java\com\taotao\web\pojo\Order.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-web\src\main\java\com\taotao\web\pojo\TbUser.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-web\src\main\java\com\taotao\web\service\UserService.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-web\src\main\java\com\taotao\web\pojo\TbCart.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-web\src\main\java\com\taotao\web\service\OrderService.java

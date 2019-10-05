@@ -1,0 +1,17 @@
+com\taotao\web\pojo\TbCart.class
+com\taotao\web\controller\ItemController.class
+com\taotao\web\service\ItemService.class
+com\taotao\web\service\IndexService.class
+com\taotao\web\pojo\OrderShipping.class
+com\taotao\web\controller\ItemCacheController.class
+com\taotao\web\service\OrderService.class
+com\taotao\web\pojo\OrderItem.class
+com\taotao\web\threaLocal\UserThreadLocal.class
+com\taotao\web\controller\IndexController.class
+com\taotao\web\pojo\Order.class
+com\taotao\web\rabbitHandler\ItemMQHandler.class
+com\taotao\web\service\CartService.class
+com\taotao\web\interceptors\UserLoginHandleInterceptor.class
+com\taotao\web\pojo\TbUser.class
+com\taotao\web\service\UserService.class
+com\taotao\web\controller\OrderController.class

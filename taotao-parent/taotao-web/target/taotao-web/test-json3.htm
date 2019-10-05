@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="http://localhost:8080/js/jquery-easyui-1.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        alert($);//如果正常弹出，说明jquery加载成功，$：代表js
+        $(function () {
+            $.ajax({
+                url : "http://localhost:8080/json.jsp",
+                type : "get",
+                dataType : "jsonp",
+                success : function (data) {
+                    alert(data.abc);//123，如果正常弹出，说明json数据请求成功
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

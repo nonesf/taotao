@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<!--script标签的src具有跨域请求资源的能力，但是ajax没有-->
+    <script type="text/javascript" src="http://localhost:8080/js/jquery-easyui-1.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        alert($);//如果正常弹出，说明jquery加载成功，$：代表js
+        /* $(function () {
+             $.ajax({
+                 url : "http://localhost:8080/json.jsp",
+                 type : "get",
+                 dataType : "json",
+                 success : function (data) {
+                     alert(data.abc);//123，如果正常弹出，说明json数据请求成功
+                 }
+             });
+         });*/
+
+        <!--定义fun方法-->
+        function fun(data) {
+            alert(data.abc);
+        }
+    </script>
+
+    <!--因为script标签具有跨域能力，所以把ajax的内容放在script标签中，
+    但是存在js解析问题，因为返回的数据是json数据，但是其都当做js解析-->
+    <!--优化：回调函数名当做参数传递给后台，避免把名称写固定-->
+    <script type="text/javascript" src="http://localhost:8080/json.jsp?callback=fun"></script>
+</head>
+<body>
+
+</body>
+</html>

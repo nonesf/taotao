@@ -1,0 +1,8 @@
+com\taotao\sso\service\UserService.class
+com\taotao\sso\pojo\TbUserExample.class
+com\taotao\sso\pojo\TbUser.class
+com\taotao\sso\pojo\TbUserExample$Criteria.class
+com\taotao\sso\pojo\TbUserExample$GeneratedCriteria.class
+com\taotao\sso\pojo\TbUserExample$Criterion.class
+com\taotao\sso\mapper\TbUserMapper.class
+com\taotao\sso\controller\UserController.class

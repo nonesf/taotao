@@ -1,0 +1,7 @@
+com\taotao\manage\mapper\TbContentCategoryMapper.class
+com\taotao\manage\mapper\TbItemMapper.class
+com\taotao\manage\mapper\TbContentMapper.class
+com\taotao\manage\mapper\TbItemCatMapper.class
+com\taotao\manage\mapper\TbItemDescMapper.class
+com\taotao\manage\mapper\TbItemParamItemMapper.class
+com\taotao\manage\mapper\TbItemParamMapper.class

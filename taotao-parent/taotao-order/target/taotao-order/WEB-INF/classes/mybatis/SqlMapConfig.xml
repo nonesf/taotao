@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--<plugins>
+        <plugin interceptor="com.github.pagehelper.PageHelper">
+            <property name="dialect" value="mysql"/>
+            &lt;!&ndash;RowBounds true:分页会自动进行count查询，默认为false&ndash;&gt;
+            <property name="rowBoundsWithCount" value="true"/>
+        </plugin>
+    </plugins>-->
+
+    <settings>
+        <!--开启字段名和属性名驼峰似的匹配，配置后无需写resultMapper将数据库字段和实体类属性对应-->
+        <setting name="mapUnderscoreToCamelCase" value="true" />
+        <!--开启延迟加载-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!--按需延迟加载，当设置为true时，懒加载的对象可能被任何懒属性全部加载；否则，每个属性按需加载-->
+        <setting name="aggressiveLazyLoading" value="false"/>
+    </settings>
+
+    <typeAliases>
+        <!--指定别名-->
+        <!--
+     通过package, 可以直接指定package的名字， mybatis会自动扫描你指定包下面的javabean,
+     并且默认设置一个别名，默认的名字为： javabean 的首字母小写的非限定类名来作为它的别名。
+     也可在javabean 加上注解@Alias 来自定义别名， 例如： @Alias(user)
+      -->
+        <typeAlias type="com.taotao.order.bean.Where" alias="Where"/>
+        <package name="com.taotao.order.pojo"/>
+    </typeAliases>
+
+    <plugins>
+        <!--配置分页插件-->
+        <plugin interceptor="com.github.miemiedev.mybatis.paginator.OffsetLimitInterceptor">
+            <property name="dialectClass" value="com.github.miemiedev.mybatis.paginator.dialect.MySQLDialect"/>
+        </plugin>
+    </plugins>
+
+</configuration>

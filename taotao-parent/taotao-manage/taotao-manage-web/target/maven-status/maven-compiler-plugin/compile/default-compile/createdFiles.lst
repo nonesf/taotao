@@ -1,0 +1,12 @@
+com\taotao\manage\controller\PicUploadController.class
+com\taotao\manage\controller\api\ApiContentController.class
+com\taotao\manage\controller\ItemDescController.class
+com\taotao\manage\controller\ItemParamItemController.class
+com\taotao\manage\controller\api\ApiItemCatController.class
+com\taotao\manage\controller\ContentController.class
+com\taotao\manage\controller\api\ApiItemController.class
+com\taotao\manage\controller\TbItemCatController.class
+com\taotao\manage\controller\PageController.class
+com\taotao\manage\controller\ContentCategoryController.class
+com\taotao\manage\controller\ItemParamContreller.class
+com\taotao\manage\controller\ItemController.class

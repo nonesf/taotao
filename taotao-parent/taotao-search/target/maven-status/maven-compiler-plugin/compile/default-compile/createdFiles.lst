@@ -1,0 +1,7 @@
+com\taotao\search\service\SolrjService.class
+com\taotao\search\controller\SearchController.class
+com\taotao\search\service\ItemSearchService.class
+com\taotao\search\pojo\TbItem.class
+com\taotao\search\service\ItemService.class
+com\taotao\search\pojo\SearchResult.class
+com\taotao\search\rabbitHandler\ItemMQHandler.class

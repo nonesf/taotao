@@ -1,0 +1,16 @@
+com\taotao\order\bean\OperaterEnum.class
+com\taotao\order\pojo\OrderItem.class
+com\taotao\order\job\PaymentOrderJob.class
+com\taotao\order\controller\OrderController.class
+com\taotao\order\pojo\OrderShipping.class
+com\taotao\order\dao\IOrder.class
+com\taotao\order\mapper\OrderMapper.class
+com\taotao\order\pojo\PageResult.class
+com\taotao\order\utils\ValidateUtil.class
+com\taotao\order\mapper\IMapper.class
+com\taotao\order\service\OrderService.class
+com\taotao\order\dao\OrderDao.class
+com\taotao\order\pojo\ResultMsg.class
+com\taotao\order\bean\TaotaoResult.class
+com\taotao\order\pojo\Order.class
+com\taotao\order\bean\Where.class

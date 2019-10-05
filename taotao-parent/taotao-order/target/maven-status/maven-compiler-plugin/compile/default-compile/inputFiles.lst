@@ -1,0 +1,16 @@
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-order\src\main\java\com\taotao\order\pojo\OrderShipping.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-order\src\main\java\com\taotao\order\pojo\OrderItem.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-order\src\main\java\com\taotao\order\utils\ValidateUtil.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-order\src\main\java\com\taotao\order\pojo\PageResult.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-order\src\main\java\com\taotao\order\dao\OrderDao.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-order\src\main\java\com\taotao\order\mapper\IMapper.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-order\src\main\java\com\taotao\order\bean\OperaterEnum.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-order\src\main\java\com\taotao\order\controller\OrderController.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-order\src\main\java\com\taotao\order\dao\IOrder.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-order\src\main\java\com\taotao\order\bean\Where.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-order\src\main\java\com\taotao\order\job\PaymentOrderJob.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-order\src\main\java\com\taotao\order\bean\TaotaoResult.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-order\src\main\java\com\taotao\order\pojo\ResultMsg.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-order\src\main\java\com\taotao\order\service\OrderService.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-order\src\main\java\com\taotao\order\pojo\Order.java
+E:\JAVA\idea\idea-pro\taotao-parent\taotao-order\src\main\java\com\taotao\order\mapper\OrderMapper.java

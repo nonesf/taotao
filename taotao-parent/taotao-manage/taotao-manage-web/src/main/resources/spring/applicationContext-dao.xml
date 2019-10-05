@@ -1,0 +1,86 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+    <!--使用spring自带的占位符替换功能-->
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <!--允许JVM参数覆盖-->
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
+        <!--忽略没有找到的资源文件-->
+        <property name="ignoreResourceNotFound" value="true"/>
+        <!--
+        配置资源文件,两种配置方式效果一样，只是此次配置更加底层，如下注解为常用配置读取资源文件方式
+        <context:property-placeholder location="classpath:jdbc.properties"/>
+        -->
+        <property name="locations">
+            <list>
+                <value>classpath:jdbc.properties</value>
+                <value>classpath:env.properties</value>
+                <value>classpath:redis.properties</value>
+                <value>classpath:httpclient.properties</value>
+                <value>classpath:rabbitmq.properties</value>
+            </list>
+        </property>
+    </bean>
+
+<!--
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+-->
+
+    <!--配置数据源-->
+    <bean id="masterDataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.master.driver}"/>
+        <property name="url" value="${jdbc.master.url}"/>
+        <property name="username" value="${jdbc.master.username}"/>
+        <property name="password" value="${jdbc.master.password}"/>
+    </bean>
+
+    <!--配置数据源-->
+    <bean id="slaveDataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.slave.driver}"/>
+        <property name="url" value="${jdbc.slave.url}"/>
+        <property name="username" value="${jdbc.slave.username}"/>
+        <property name="password" value="${jdbc.slave.password}"/>
+    </bean>
+
+    <!--定义数据源，使用自己实现的动态资源-->
+     <bean id="dataSource" class="com.taotao.manage.datasource.DynamicDataSource">
+        <!--设置多个数据源-->
+        <property name="targetDataSources">
+            <map key-type="java.lang.String">
+                <!--这个可以需要和程序中的可以一致-->
+                <entry key="master" value-ref="masterDataSource"/>
+                <entry key="slave" value-ref="slaveDataSource"/>
+            </map>
+        </property>
+        <!--设置默认的数据源，默认走写库，写库可读可写-->
+        <property name="defaultTargetDataSource" ref="masterDataSource"/>
+    </bean>
+
+    <!--配置SqlSessionFactory ,spring-mybatis整合-->
+    <bean id="sqlSessionFactory"  class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--配置核心配置文件-->
+        <property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml"/>
+        <!--设置数据源-->
+        <property name="dataSource" ref="dataSource"/>
+        <!--配置别名包-->
+        <property name="typeAliasesPackage" value="com.taotao.manager.pojo"/>
+        <!--自动扫描mapper.xml文件-->
+        <property name="mapperLocations" value="classpath:com/taotao/manage/mapper/*.xml"/>
+
+    </bean>
+
+
+    <!--配置包扫描，mapper.xml文件和相应的pojo类放在一个包下，可直接扫描到配置文件和类
+    通过反射创建Dao实现，并添加到IoC容器中-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <!--设置mapper扫描包，mapper代理开发方式，配置mapper接口-->
+        <property name="basePackage" value="com.taotao.manage.mapper"/>
+    </bean>
+</beans>
